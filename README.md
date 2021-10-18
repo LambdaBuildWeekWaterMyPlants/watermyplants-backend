@@ -6,12 +6,12 @@ https://www.12345678.com/
 
 ## Endpoints (Plan so far)
 
-[[POST] 'api/auth/register' Register new user]</br>
-[[POST] 'api/auth/login ' Login user]</br>
+[[POST] 'api/auth/register' Register new user](#one)</br>
+[[POST] 'api/auth/login ' Login user](#two)</br>
 
-[[GET] '/api/plants' Returns all plants in database to authenticated users]</br>
-[[POST] '/api/plants' Returns all plants in database to authenticated users]</br>
-[[PUT] '/api/plants' Returns all plants in database to authenticated users]</br>
-[[DELETE] '/api/plants' Returns all plants in database to authenticated users]</br>
+[[GET] '/api/plants' Returns all plants in database to authenticated users](#three)</br>
+[[POST] '/api/plants' Returns all plants in database to authenticated users](#four)</br>
+[[PUT] '/api/plants' Returns all plants in database to authenticated users](#five)</br>
+[[DELETE] '/api/plants' Returns all plants in database to authenticated users](#six)</br>
 
-[[POST] 'api/users/:id' Update user credentials ]</br>
+[[POST] 'api/users/:id' Update user credentials ](#seven)</br>
