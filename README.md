@@ -1,6 +1,6 @@
 # Water My Plants
 
-## API URL
+## API URL (Fake URL)
 
 https://www.12345678.com/
 
