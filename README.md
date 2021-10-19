@@ -25,7 +25,7 @@ https://water-myplants-backend.herokuapp.com/
 ```
 
 ```
-body (whatever the user wishes to update)
+body (all fields required)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
@@ -47,7 +47,7 @@ response
 ```
 
 ```
-body (whatever the user wishes to update)
+body (all fields required)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
