@@ -17,7 +17,7 @@ https://water-myplants-backend.herokuapp.com/
 [[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant) - NOT FUNCTIONAL </br>
 
 #### /api/users
-[[POST] 'api/users/:id' ](#update-user) - FUNCTIONAL</br>
+[[PUT] 'api/users/:id' ](#update-user) - FUNCTIONAL</br>
 
 
 
@@ -87,7 +87,7 @@ RESPONSE
 
 <a name='update-user'>Update (Update user credentials) {requires token}</a>
 ```
-[POST] 'https://water-myplants-backend.herokuapp.com/api/users/:id 
+[PUT] 'https://water-myplants-backend.herokuapp.com/api/users/:id 
 ```
 
 ```
