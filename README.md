@@ -29,7 +29,6 @@ https://water-myplants-backend.herokuapp.com/
     "username": "string" (required, unique) (
     "phoneNumber": "string" (required, format = "xxx-xxx-xxxx')
     "password": "string" (required)
-
 ```
 
 ### Plants Table 
@@ -38,7 +37,6 @@ https://water-myplants-backend.herokuapp.com/
     "nickname": "string" (required)
     "species": "string" (required)
     "h2o_frequency": "string" (required)
-
 ```
 
 ## Endpoints
