@@ -1,8 +1,8 @@
 # Water My Plants
 
-## API URL (Fake URL)
+## API URL 
 
-https://www.12345678.com/
+https://water-myplants-backend.herokuapp.com/
 
 ## Endpoints (Plan so far)
 
