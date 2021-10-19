@@ -17,7 +17,7 @@ https://water-myplants-backend.herokuapp.com/
 [[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant) - NOT FUNCTIONAL </br>
 
 #### /api/users
-[[POST] 'api/users/:id' (#update-user) ] - FUNCTIONAL</br>
+[[POST] 'api/users/:id' ](#update-user) - FUNCTIONAL</br>
 
 
 
