@@ -20,6 +20,26 @@ https://water-myplants-backend.herokuapp.com/
 [[POST] 'api/users/:id' (Update user credentials) ](#update-user) - FUNCTIONAL</br>
 
 <a name='register'>Register</a>
+
+## Users Table Schema
+```
+    "user_id": (unique key, automatically generated)
+    "username": "string" (required, unique) (
+    "phoneNumber": "string" (required, format = "xxx-xxx-xxxx')
+    "password": "string" (required)
+
+```
+
+## Plants Table Schema
+```
+    "plant_id": (unique key, automatically generated)
+    "nickname": "string" (required)
+    "species": "string" (required)
+    "h2o_frequency": "string" (required)
+
+```
+
+
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/register' 
 ```
