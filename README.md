@@ -11,13 +11,13 @@ https://water-myplants-backend.herokuapp.com/
 [[POST] '/api/auth/login ' ](#login) - FUNCTIONAL</br>
 
 #### /api/plants
-[[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#get-plants)</br>
-[[POST] '/api/plants' (Create plant in database if authenticated ) ](#create-plants)</br>
-[[PUT] '/api/plants' (Update plant in database if authenticated ) ](#update-plant)</br>
-[[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant)</br>
+[[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#get-plants) - NOT FUNCTIONAL </br>
+[[POST] '/api/plants' (Create plant in database if authenticated ) ](#create-plants) - NOT FUNCTIONAL </br>
+[[PUT] '/api/plants' (Update plant in database if authenticated ) ](#update-plant) - NOT FUNCTIONAL </br>
+[[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant) - NOT FUNCTIONAL </br>
 
 #### /api/users
-[[POST] 'api/users/:id' (#update-user) - FUNCTIONAL</br>
+[[POST] 'api/users/:id' (#update-user) ] - FUNCTIONAL</br>
 
 
 
