@@ -31,6 +31,8 @@ body (all fields required)
     "phoneNumber": "123-321-4321",
     "password": "abc123"
 }
+```
+```
 response
 {
     "user_id": 1,
@@ -53,6 +55,8 @@ body (all fields required)
     "phoneNumber": "123-321-4321",
     "password": "abc123"
 }
+```
+```
 response
 {
     "message": `Welcome, Test1`,
@@ -73,6 +77,8 @@ body (whatever the user wishes to update)
     "phoneNumber": "123-321-4321",
     "password": "abc123"
 }
+```
+```
 response
 {
     "user_id": 1,
