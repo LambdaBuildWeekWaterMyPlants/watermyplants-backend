@@ -85,7 +85,7 @@ RESPONSE
 }
 ```
 
-<a name='update-user'>Update (Update user credentials) {requires token} ]</a>
+<a name='update-user'>Update (Update user credentials) {requires token}</a>
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/users/:id 
 ```
