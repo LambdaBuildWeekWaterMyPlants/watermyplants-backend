@@ -7,17 +7,17 @@ https://water-myplants-backend.herokuapp.com/
 ## Endpoints (Plan so far)
 
 #### /api/auth
-[[POST] '/api/auth/register' (Register new user) ](#register) - FUNCTIONAL</br> 
-[[POST] '/api/auth/login ' (Login user) ](#login) - FUNCTIONAL</br>
+[[POST] '/api/auth/register' ](#register) - FUNCTIONAL</br> 
+[[POST] '/api/auth/login ' ](#login) - FUNCTIONAL</br>
 
 #### /api/plants
-[[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#get-plants)</br>
-[[POST] '/api/plants' (Create plant in database if authenticated ) ](#create-plants)</br>
-[[PUT] '/api/plants' (Update plant in database if authenticated ) ](#update-plant)</br>
-[[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant)</br>
+[[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#get-plants) - NOT FUNCTIONAL </br>
+[[POST] '/api/plants' (Create plant in database if authenticated ) ](#create-plants) - NOT FUNCTIONAL </br>
+[[PUT] '/api/plants' (Update plant in database if authenticated ) ](#update-plant) - NOT FUNCTIONAL </br>
+[[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant) - NOT FUNCTIONAL </br>
 
 #### /api/users
-[[POST] 'api/users/:id' (Update user credentials) ](#update-user) - FUNCTIONAL</br>
+[[PUT] 'api/users/:id' ](#update-user) - FUNCTIONAL</br>
 
 
 
@@ -41,13 +41,13 @@ https://water-myplants-backend.herokuapp.com/
 
 ## Endpoints
 
-<a name='register'>Register</a>
+<a name='register'>Register (Register new user)</a>
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/register' 
 ```
 
 ```
-body (all fields required)
+BODY (all fields required)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
@@ -55,7 +55,7 @@ body (all fields required)
 }
 ```
 ```
-response
+RESPONSE
 {
     "user_id": 1,
     "username": "Test1",
@@ -64,14 +64,13 @@ response
 }
 ```
 
-<a name='login'>Login</a>
+<a name='login'>Login (Login user) {receives token in response}</a>
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/login'
-~ {receives token in response} ~
 ```
 
 ```
-body (all fields required)
+BODY (all fields required)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
@@ -79,21 +78,20 @@ body (all fields required)
 }
 ```
 ```
-response
+RESPONSE
 {
     "message": `Welcome, Test1`,
     token
 }
 ```
 
-<a name='update-user'>Update</a>
+<a name='update-user'>Update (Update user credentials) {requires token}</a>
 ```
-[POST] 'https://water-myplants-backend.herokuapp.com/api/users/:id 
-~ {requires token} ~
+[PUT] 'https://water-myplants-backend.herokuapp.com/api/users/:id 
 ```
 
 ```
-body (whatever the user wishes to update)
+BODY (whatever the user wishes to update)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
@@ -101,7 +99,7 @@ body (whatever the user wishes to update)
 }
 ```
 ```
-response
+RESPONSE
 {
     "user_id": 1,
     "username": "Test1",
