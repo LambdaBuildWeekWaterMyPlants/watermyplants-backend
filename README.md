@@ -41,8 +41,8 @@ https://water-myplants-backend.herokuapp.com/
 
 ### /api/auth
 #### Register
-Endpoint: /auth/register
-Info: Register new user
+Endpoint: /auth/register </br>
+Info: Register new user </br>
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/register' 
 ```
