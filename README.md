@@ -7,15 +7,15 @@ https://water-myplants-backend.herokuapp.com/
 ## Endpoints (Plan so far)
 
 #### /api/auth
-[[POST] '/api/auth/register' ](#register)</br> 
-[[POST] '/api/auth/login ' ](#login)</br>
+[[POST] '/api/auth/register' ](#Register)</br> 
+[[POST] '/api/auth/login ' ](#Login)</br>
 
 #### /api/users
-[[PUT] 'api/users/:id' ](#update-user)</br>
+[[PUT] 'api/users/:id' ](#Update-User)</br>
 
 #### /api/plants
-[[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#get-plants)</br>
-[[POST] '/api/plants' (Create plant in database if authenticated ) ](#create-plants)</br>
+[[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#Get-Plants)</br>
+[[POST] '/api/plants' (Create plant in database if authenticated ) ](#Create-Plants)</br>
 [[PUT] '/api/plants' (Update plant in database if authenticated ) ](#update-plant)</br>
 [[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant)</br>
 
@@ -41,7 +41,7 @@ https://water-myplants-backend.herokuapp.com/
 
 ### '/api/auth'
 #### Register
-<a name='register'>Register (Register new user)</a>
+(Register new user)
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/register' 
 ```
@@ -64,7 +64,7 @@ RESPONSE
 }
 ```
 #### Login
-<a name='login'>Login (Login user) {receives token in response}</a>
+(Login user) {receives token in response}
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/login'
 ```
@@ -86,8 +86,8 @@ RESPONSE
 ```
 
 ### '/api/users'
-#### Update
-<a name='update-user'>Update (Update user credentials) {requires token}</a>
+#### Update-User
+(Update user credentials) {requires token}
 ```
 [PUT] 'https://water-myplants-backend.herokuapp.com/api/users/:id 
 ```
@@ -112,9 +112,8 @@ RESPONSE
 
 ### '/api/plants'
 
-#### Read
-
-<a name='get-plants'>Get Plants (Returns all plants in database to authenticated users){requires token} </a>
+#### Get-Plants
+(Returns all plants in database to authenticated users){requires token}
 ```
 [GET] 'https://water-myplants-backend.herokuapp.com/api/plants' 
 ```
@@ -135,8 +134,8 @@ RESPONSE
     "h2o_frequency": "Once every 4 Days"
 }
 ```
-#### Create
-<a name='create-plants'>Create Plant (Create plant in database if authenticated){requires token} </a>
+#### Create-Plants
+(Create plant in database if authenticated) {requires token}
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/plants'
 ```
@@ -157,8 +156,8 @@ RESPONSE
     "h2o_frequency": "Once every 4 Days"
 }
 ```
-#### Update
-<a name='update-plant'>Update Plants (Update plant in database if authenticated, url params id must exist)){requires token} </a>
+#### Update-Plant
+(Update plant in database if authenticated, url params id must exist) {requires token}
 ```
 [PUT] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
 ```
@@ -179,8 +178,8 @@ RESPONSE
     "h2o_frequency": "Once every 4 Days"
 }
 ```
-#### Delete
-<a name='delete-plant'>Delete Plant (Delete plant in database if authenticated, only url params required, id must exist in database){requires token} </a>
+#### Delete-Plant
+(Delete plant in database if authenticated, only url params required, id must exist in database) {requires token}
 ```
 [DELETE] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
 ```
