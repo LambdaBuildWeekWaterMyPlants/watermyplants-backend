@@ -15,7 +15,7 @@ https://water-myplants-backend.herokuapp.com/
 
 #### /api/plants
 [[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#Get-Plants)</br>
-[[POST] '/api/plants' (Create plant in database if authenticated ) ](#Create-Plants)</br>
+[[POST] '/api/plants' (Create plant in database if authenticated ) ](#Create-Plant)</br>
 [[PUT] '/api/plants' (Update plant in database if authenticated ) ](#update-plant)</br>
 [[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant)</br>
 
@@ -134,7 +134,7 @@ RESPONSE
     "h2o_frequency": "Once every 4 Days"
 }
 ```
-#### Create-Plants
+#### Create-Plant
 (Create plant in database if authenticated) {requires token}
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/plants'
