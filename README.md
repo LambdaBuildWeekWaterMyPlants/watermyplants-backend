@@ -19,18 +19,42 @@ https://water-myplants-backend.herokuapp.com/
 #### /api/users
 [[POST] 'api/users/:id' (Update user credentials) ](#update-user) - FUNCTIONAL</br>
 
+
+
+## Schema's
+
+### Users Table
+```
+    "user_id": (unique key, automatically generated)
+    "username": "string" (required, unique) (
+    "phoneNumber": "string" (required, format = "xxx-xxx-xxxx')
+    "password": "string" (required)
+```
+
+### Plants Table 
+```
+    "plant_id": (unique key, automatically generated)
+    "nickname": "string" (required)
+    "species": "string" (required)
+    "h2o_frequency": "string" (required)
+```
+
+## Endpoints
+
 <a name='register'>Register</a>
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/register' 
 ```
 
 ```
-body (whatever the user wishes to update)
+body (all fields required)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
     "password": "abc123"
 }
+```
+```
 response
 {
     "user_id": 1,
@@ -47,12 +71,14 @@ response
 ```
 
 ```
-body (whatever the user wishes to update)
+body (all fields required)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
     "password": "abc123"
 }
+```
+```
 response
 {
     "message": `Welcome, Test1`,
@@ -73,6 +99,8 @@ body (whatever the user wishes to update)
     "phoneNumber": "123-321-4321",
     "password": "abc123"
 }
+```
+```
 response
 {
     "user_id": 1,
