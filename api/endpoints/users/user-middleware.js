@@ -12,6 +12,18 @@ const validateUserCredentials = (req, res, next)=>{
     }
 }
 
+const validateUserLoginCredentials = (req, res, next)=>{
+    const {username, password} = req.body
+    if(!username || !password){
+        next({
+            status: 400, 
+            message: 'username & password required'
+        })
+    }else{
+        next()
+    }
+}
+
 const checkUsernameFree = async(req, res, next)=>{
     try{
         const {username} = req.body
@@ -66,6 +78,7 @@ const checkUserIdExists = async(req, res, next)=>{
 
 module.exports = {
     validateUserCredentials,
+    validateUserLoginCredentials,
     checkUsernameFree,
     checkUsernameExists,
     checkUserIdExists,

@@ -75,7 +75,6 @@ RESPONSE
 BODY (all fields required)
 {
     "username": "Test1",
-    "phoneNumber": "123-321-4321",
     "password": "abc123"
 }
 ```

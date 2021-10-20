@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { validateUserCredentials, checkUsernameFree, checkUsernameExists,} = require('../users/user-middleware')
+const { validateUserCredentials, checkUsernameFree, checkUsernameExists, validateUserLoginCredentials} = require('../users/user-middleware')
 const Users = require('../users/users-model')
 const {JWT_SECRET} = require('../../secret')
 const bcrypt = require('bcryptjs')
@@ -15,7 +15,7 @@ router.post('/register',validateUserCredentials,checkUsernameFree, (req, res, ne
         .catch(next)
 })
 
-router.post('/login',validateUserCredentials,checkUsernameExists, (req, res, next)=>{
+router.post('/login',validateUserLoginCredentials,checkUsernameExists, (req, res, next)=>{
     if(bcrypt.compareSync(req.body.password, req.user.password)){
         const token = tokenCreate(req.user)
         res.status(200).json({
