@@ -7,19 +7,17 @@ https://water-myplants-backend.herokuapp.com/
 ## Endpoints (Plan so far)
 
 #### /api/auth
-[[POST] '/api/auth/register' ](#register) - FUNCTIONAL</br> 
-[[POST] '/api/auth/login ' ](#login) - FUNCTIONAL</br>
-
-#### /api/plants
-[[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#get-plants) - NOT FUNCTIONAL </br>
-[[POST] '/api/plants' (Create plant in database if authenticated ) ](#create-plants) - NOT FUNCTIONAL </br>
-[[PUT] '/api/plants' (Update plant in database if authenticated ) ](#update-plant) - NOT FUNCTIONAL </br>
-[[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant) - NOT FUNCTIONAL </br>
+[[POST] '/api/auth/register' ](#register)</br> 
+[[POST] '/api/auth/login ' ](#login)</br>
 
 #### /api/users
-[[PUT] 'api/users/:id' ](#update-user) - FUNCTIONAL</br>
+[[PUT] 'api/users/:id' ](#update-user)</br>
 
-
+#### /api/plants
+[[GET] '/api/plants' (Returns all plants in database to authenticated users) ](#get-plants)</br>
+[[POST] '/api/plants' (Create plant in database if authenticated ) ](#create-plants)</br>
+[[PUT] '/api/plants' (Update plant in database if authenticated ) ](#update-plant)</br>
+[[DELETE] '/api/plants' (Delete plant in database if authenticated ) ](#delete-plant)</br>
 
 ## Schema's
 
@@ -40,6 +38,8 @@ https://water-myplants-backend.herokuapp.com/
 ```
 
 ## Endpoints
+
+### '/api/auth'
 
 <a name='register'>Register (Register new user)</a>
 ```
@@ -85,6 +85,8 @@ RESPONSE
 }
 ```
 
+### '/api/users'
+
 <a name='update-user'>Update (Update user credentials) {requires token}</a>
 ```
 [PUT] 'https://water-myplants-backend.herokuapp.com/api/users/:id 
@@ -108,3 +110,84 @@ RESPONSE
 }
 ```
 
+### '/api/plants'
+
+<a name='get-plants'>Get Plants (Returns all plants in database to authenticated users){requires token} </a>
+```
+[GET] 'https://water-myplants-backend.herokuapp.com/api/plants' 
+```
+```
+BODY (All Fields Required)
+{
+    "nickname": "Golden Pothos",
+    "species": "Epipremnum Aureum",
+    "h2o_frequency": "Once every 4 Days"
+}
+```
+```
+RESPONSE
+{
+    "plant_id": 1
+    "nickname": "Golden Pothos",
+    "species": "Epipremnum Aureum",
+    "h2o_frequency": "Once every 4 Days"
+}
+```
+
+<a name='create-plants'>Create Plant (Create plant in database if authenticated){requires token} </a>
+```
+[POST] 'https://water-myplants-backend.herokuapp.com/api/plants'
+```
+```
+BODY (All Fields Required)
+{
+    "nickname": "Golden Pothos",
+    "species": "Epipremnum Aureum",
+    "h2o_frequency": "Once every 4 Days"
+}
+```
+```
+RESPONSE
+{
+    "plant_id": 1
+    "nickname": "Golden Pothos",
+    "species": "Epipremnum Aureum",
+    "h2o_frequency": "Once every 4 Days"
+}
+```
+
+<a name='update-plant'>Update Plants (Update plant in database if authenticated, url params id must exist)){requires token} </a>
+```
+[PUT] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
+```
+```
+BODY (All Fields Required)
+{
+    "nickname": "Devils Ivy",
+    "species": "Epipremnum Aureum",
+    "h2o_frequency": "Once every 4 Days"
+}
+```
+```
+RESPONSE
+{
+    "plant_id": 1
+    "nickname": "Devils Ivy",
+    "species": "Epipremnum Aureum",
+    "h2o_frequency": "Once every 4 Days"
+}
+```
+
+<a name='delete-plant'>Delete Plant (Delete plant in database if authenticated, only url params required, id must exist in database){requires token} </a>
+```
+[DELETE] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
+```
+```
+RESPONSE
+{
+    "plant_id": 1
+    "nickname": "Golden Pothos",
+    "species": "Epipremnum Aureum",
+    "h2o_frequency": "Once every 4 Days"
+}
+```
