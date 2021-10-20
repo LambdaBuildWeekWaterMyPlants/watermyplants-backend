@@ -107,3 +107,4 @@ RESPONSE
     "password": "$2a$08$lc3dc6jZOrSRS7ZLS5fRn.7OVqDG4RpOT3bLeWYMvqfX.I9pN4oSG"
 }
 ```
+
