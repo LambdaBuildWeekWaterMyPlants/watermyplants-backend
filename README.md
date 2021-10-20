@@ -118,14 +118,6 @@ RESPONSE
 [GET] 'https://water-myplants-backend.herokuapp.com/api/plants' 
 ```
 ```
-BODY (All Fields Required)
-{
-    "nickname": "Golden Pothos",
-    "species": "Epipremnum Aureum",
-    "h2o_frequency": "Once every 4 Days"
-}
-```
-```
 RESPONSE
 {
     "plant_id": 1
