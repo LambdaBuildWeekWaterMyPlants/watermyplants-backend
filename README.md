@@ -41,8 +41,8 @@ https://water-myplants-backend.herokuapp.com/
 
 ### /api/auth
 #### Register
-Endpoint: /auth/register </br>
-Info: Register new user </br>
+**Endpoint:** /auth/register </br>
+**Info:** Register new user </br>
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/register' 
 ```
@@ -65,8 +65,8 @@ RESPONSE
 }
 ```
 #### Login
-Endpoint: /auth/login </br>
-Info: Login user, receives {token} in response</br>
+**Endpoint:** /auth/login </br>
+**Info:** Login user, receives {token} in response</br>
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/login'
 ```
@@ -89,8 +89,8 @@ RESPONSE
 
 ### /api/users
 #### Update-User
-Endpoint: /api/users/:id </br>
-Info: Update user credentials {requires token}</br>
+**Endpoint:** /api/users/:id </br>
+**Info:** Update user credentials {requires token}</br>
 ```
 [PUT] 'https://water-myplants-backend.herokuapp.com/api/users/1 
 ```
@@ -116,8 +116,8 @@ RESPONSE
 ### /api/plants
 
 #### Get-Plants
-Endpoint: /api/plants</br>
-Info: Returns all plants in database to authenticated users {requires token}</br>
+**Endpoint:** /api/plants</br>
+**Info:** Returns all plants in database to authenticated users {requires token}</br>
 ```
 [GET] 'https://water-myplants-backend.herokuapp.com/api/plants' 
 ```
@@ -131,8 +131,8 @@ RESPONSE
 }
 ```
 #### Create-Plant
-Endpoint: /api/plants</br>
-Info:  Create plant in database if authenticated {requires token}</br>
+**Endpoint:** /api/plants</br>
+**Info:**  Create plant in database if authenticated {requires token}</br>
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/plants'
 ```
@@ -154,8 +154,8 @@ RESPONSE
 }
 ```
 #### Update-Plant
-Endpoint: /api/plants/:id </br>
-Info: Update plant in database if authenticated, url params id must exist {requires token} </br>
+**Endpoint:** /api/plants/:id </br>
+**Info:** Update plant in database if authenticated, url params id must exist {requires token} </br>
 ```
 [PUT] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
 ```
@@ -177,8 +177,8 @@ RESPONSE
 }
 ```
 #### Delete-Plant
-Endpoint: /api/plants/:id </br>
-Info: Delete plant in database if authenticated, valid id for params, id must exist in database, returns deleted plant {requires token} </br>
+**Endpoint:** /api/plants/:id </br>
+**Info:** Delete plant in database if authenticated, valid id for params, id must exist in database, returns deleted plant {requires token} </br>
 ```
 [DELETE] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
 ```
