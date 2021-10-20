@@ -113,7 +113,7 @@ RESPONSE
 ### /api/plants
 
 #### Get-Plants
-/api/plants (Returns all plants in database to authenticated users){requires token}
+/api/plants (Returns all plants in database to authenticated users) {requires token}
 ```
 [GET] 'https://water-myplants-backend.herokuapp.com/api/plants' 
 ```
@@ -171,7 +171,7 @@ RESPONSE
 }
 ```
 #### Delete-Plant
-/api/plants/:id (Delete plant in database if authenticated, only url params required, id must exist in database) {requires token}
+/api/plants/:id (Delete plant in database if authenticated, only url params required, id must exist in database, returns deleted plant) {requires token}
 ```
 [DELETE] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
 ```
