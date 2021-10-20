@@ -41,7 +41,8 @@ https://water-myplants-backend.herokuapp.com/
 
 ### /api/auth
 #### Register
-/auth/register (Register new user)
+Endpoint: /auth/register
+Info: Register new user
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/register' 
 ```
@@ -64,7 +65,8 @@ RESPONSE
 }
 ```
 #### Login
-/auth/login (Login user) {receives token in response}
+Endpoint: /auth/login 
+Info: Login user, receives {token} in response
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/auth/login'
 ```
@@ -87,7 +89,8 @@ RESPONSE
 
 ### /api/users
 #### Update-User
-/api/users/:id (Update user credentials) {requires token}
+Endpoint: /api/users/:id 
+Info: Update user credentials {requires token}
 ```
 [PUT] 'https://water-myplants-backend.herokuapp.com/api/users/1 
 ```
@@ -113,7 +116,8 @@ RESPONSE
 ### /api/plants
 
 #### Get-Plants
-/api/plants (Returns all plants in database to authenticated users) {requires token}
+Endpoint: /api/plants
+Info: Returns all plants in database to authenticated users {requires token}
 ```
 [GET] 'https://water-myplants-backend.herokuapp.com/api/plants' 
 ```
@@ -127,7 +131,8 @@ RESPONSE
 }
 ```
 #### Create-Plant
-/api/plants (Create plant in database if authenticated) {requires token}
+Endpoint: /api/plants
+Info:  Create plant in database if authenticated {requires token}
 ```
 [POST] 'https://water-myplants-backend.herokuapp.com/api/plants'
 ```
@@ -149,7 +154,8 @@ RESPONSE
 }
 ```
 #### Update-Plant
-/api/plants/:id (Update plant in database if authenticated, url params id must exist) {requires token}
+Endpoint: /api/plants/:id
+Info: Update plant in database if authenticated, url params id must exist {requires token}
 ```
 [PUT] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
 ```
@@ -171,7 +177,8 @@ RESPONSE
 }
 ```
 #### Delete-Plant
-/api/plants/:id (Delete plant in database if authenticated, only url params required, id must exist in database, returns deleted plant) {requires token}
+Endpoint: /api/plants/:id 
+Info: Delete plant in database if authenticated, valid id for params, id must exist in database, returns deleted plant {requires token}
 ```
 [DELETE] 'https://water-myplants-backend.herokuapp.com/api/plants/1'
 ```
