@@ -5,7 +5,7 @@ const validateUserCredentials = (req, res, next)=>{
     if(!username || !phoneNumber || !password){
         next({
             status: 400, 
-            message: 'username and password required'
+            message: 'username, phone number, & password required'
         })
     }else{
         next()
