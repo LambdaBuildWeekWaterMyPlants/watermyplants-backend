@@ -12,6 +12,19 @@ router.get('/', async (req, res, next)=>{
     }
 })
 
+router.get('/:plant_id', async (req, res, next)=>{
+    try{
+        const plant = await Plants.findById(req.params.plant_id)
+        if(plant){
+            res.status(200).json(plant)
+        }else{
+            res.status(404).json({status: 404, message:"Plant does not exist"})
+        }
+    }catch(err){
+        next(err)
+    }
+})
+
 router.post('/', validatePlantCredentials, async (req, res, next)=>{
     try{
         const newPlant = await Plants.addPlant(req.body)

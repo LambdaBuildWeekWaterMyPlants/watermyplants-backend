@@ -8,6 +8,10 @@ function findBy(filter){
     return db('plants').where(filter)
 }
 
+function findById(plant_id){
+    return db('plants').where("plant_id", plant_id).first()
+}
+
 async function addPlant(plant){
     const [newPlant] = await db('plants').insert(plant, ['*'])
     return newPlant
@@ -27,6 +31,7 @@ async function removePlant(plant_id){
 module.exports = {
     getAll,
     findBy,
+    findById,
     addPlant,
     updatePlant,
     removePlant,

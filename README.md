@@ -129,6 +129,21 @@ RESPONSE
     "h2o_frequency": "Once every 4 Days"
 }
 ```
+#### Get-Plant
+**Endpoint:** /api/plants/:plant_id</br>
+**Info:** *Returns all plant with plant_id in database to authenticated users {requires token}*</br>
+```
+[GET] 'https://water-myplants-backend.herokuapp.com/api/plants/1' 
+```
+```
+RESPONSE
+{
+    "plant_id": 1
+    "nickname": "Golden Pothos",
+    "species": "Epipremnum Aureum",
+    "h2o_frequency": "Once every 4 Days"
+}
+```
 #### Create-Plant
 **Endpoint:** /api/plants</br>
 **Info:**  *Create plant in database if authenticated {requires token}* </br>
