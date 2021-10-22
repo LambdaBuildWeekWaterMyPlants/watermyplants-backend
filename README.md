@@ -81,7 +81,12 @@ BODY (all fields required)
 ```
 RESPONSE
 {
-    "message": `Welcome, Test1`,
+    "message": "Welcome, Test1",
+    "user": {
+        "user_id": 1,
+        "username": "Test1",
+        "phoneNumber": "123-321-4321"
+        },
     token
 }
 ```
