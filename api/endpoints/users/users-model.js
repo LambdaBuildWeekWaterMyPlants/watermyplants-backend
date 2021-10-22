@@ -10,7 +10,7 @@ async function addUser(user){
 }
 
 async function updateUser(user_id, user){
-    const [updatedUser] = await db('users').update(user, ['*']).where('user_id', user_id)
+    const [updatedUser] = await db('users').update(user, ['user_id', 'username', 'phoneNumber']).where('user_id', user_id)
     return updatedUser
 }
 

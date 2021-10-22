@@ -100,7 +100,7 @@ RESPONSE
 ```
 
 ```
-BODY (whatever the user wishes to update)
+BODY (required fields)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
@@ -112,8 +112,25 @@ RESPONSE
 {
     "user_id": 1,
     "username": "Test1",
-    "phoneNumber": "123-321-4321",
-    "password": "$2a$08$lc3dc6jZOrSRS7ZLS5fRn.7OVqDG4RpOT3bLeWYMvqfX.I9pN4oSG"
+    "phoneNumber": "123-321-4321"
+}
+```
+```
+OPTIONAL BODY (required fields)
+{
+    "username": "Test2",
+    "phoneNumber": "123-321-1234",
+    "password": "abc123",
+    "newPassword": "123abc"
+}
+```
+```
+RESPONSE
+{
+    "user_id": 1,
+    "username": "Test2",
+    "phoneNumber": "123-321-1234",
+    "message": "Password successfully changed."
 }
 ```
 
