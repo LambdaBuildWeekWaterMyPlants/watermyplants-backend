@@ -2,12 +2,28 @@ const Users = require('../users/users-model')
 
 const validateUserCredentials = (req, res, next)=>{
     const {username, phoneNumber, password} = req.body
-    if(!username.trim() || !phoneNumber.trim() || !password.trim()){
+    if(!username || !phoneNumber || !password){
         next({
             status: 400, 
             message: 'username, phone number, & password required'
         })
     }else{
+        if(username.trim() === ''){
+            next({
+                status: 400, 
+                message: "username can't be an empty string"
+            })
+        }if(phoneNumber.trim() === ''){
+            next({
+                status: 400, 
+                message: "phone number can't be an empty string"
+            })
+        }if(password.trim() === ''){
+            next({
+                status: 400, 
+                message: "password can't be an empty string"
+            })
+        }
         req.password = password.trim()
         req.username = username.trim()
         req.phoneNumber = phoneNumber.trim()
@@ -17,12 +33,28 @@ const validateUserCredentials = (req, res, next)=>{
 
 const validateUserUpdateCredentials = (req, res, next)=>{
     const {username, phoneNumber, password, newPassword} = req.body
-    if(!username.trim() || !phoneNumber.trim() || !password.trim()){
+    if(!username || !phoneNumber || !password){
         next({
             status: 400, 
-            message: 'invalid credentials'
+            message: 'username, phone number, & password required'
         })
     }else{
+        if(username.trim() === ''){
+            next({
+                status: 400, 
+                message: "username can't be an empty string"
+            })
+        }if(phoneNumber.trim() === ''){
+            next({
+                status: 400, 
+                message: "phone number can't be an empty string"
+            })
+        }if(password.trim() === ''){
+            next({
+                status: 400, 
+                message: "password can't be an empty string"
+            })
+        }
         req.password = password.trim()
         req.username = username.trim()
         req.phoneNumber = phoneNumber.trim()
