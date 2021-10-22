@@ -100,11 +100,12 @@ RESPONSE
 ```
 
 ```
-BODY (required fields)
+BODY (newPassword empty string)
 {
     "username": "Test1",
     "phoneNumber": "123-321-4321",
-    "password": "abc123"
+    "password": "abc123",
+    "newPassword": ""
 }
 ```
 ```
@@ -115,8 +116,9 @@ RESPONSE
     "phoneNumber": "123-321-4321"
 }
 ```
+OR
 ```
-OPTIONAL BODY (required fields)
+BODY (newPassword string)
 {
     "username": "Test2",
     "phoneNumber": "123-321-1234",

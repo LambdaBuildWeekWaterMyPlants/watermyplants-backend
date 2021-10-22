@@ -2,12 +2,31 @@ const Users = require('../users/users-model')
 
 const validateUserCredentials = (req, res, next)=>{
     const {username, phoneNumber, password} = req.body
-    if(!username || !phoneNumber || !password){
+    if(!username.trim() || !phoneNumber.trim() || !password.trim()){
         next({
             status: 400, 
             message: 'username, phone number, & password required'
         })
     }else{
+        req.password = password.trim()
+        req.username = username.trim()
+        req.phoneNumber = phoneNumber.trim()
+        next()
+    }
+}
+
+const validateUserUpdateCredentials = (req, res, next)=>{
+    const {username, phoneNumber, password, newPassword} = req.body
+    if(!username.trim() || !phoneNumber.trim() || !password.trim()){
+        next({
+            status: 400, 
+            message: 'invalid credentials'
+        })
+    }else{
+        req.password = password.trim()
+        req.username = username.trim()
+        req.phoneNumber = phoneNumber.trim()
+        req.newPassword = newPassword.trim()
         next()
     }
 }
@@ -78,6 +97,7 @@ const checkUserIdExists = async(req, res, next)=>{
 
 module.exports = {
     validateUserCredentials,
+    validateUserUpdateCredentials,
     validateUserLoginCredentials,
     checkUsernameFree,
     checkUsernameExists,

@@ -6,9 +6,8 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 router.post('/register',validateUserCredentials,checkUsernameFree, (req, res, next)=>{
-    const {username, phoneNumber, password} = req.body
-    const hash = bcrypt.hashSync(password, 8)
-    Users.addUser({username, phoneNumber, password: hash})
+    const hash = bcrypt.hashSync(req.password, 8)
+    Users.addUser({username: req.username, phoneNumber: req.phoneNumber, password: hash})
         .then(newUser=>{
             res.status(201).json(newUser)
         })

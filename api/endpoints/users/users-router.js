@@ -1,23 +1,21 @@
 const router = require('express').Router()
-const { validateUserCredentials, checkUserIdExists } = require('./user-middleware')
+const { validateUserUpdateCredentials, checkUserIdExists } = require('./user-middleware')
 const Users = require('./users-model')
 const bcrypt = require('bcryptjs')
 
-router.put('/:user_id',validateUserCredentials, checkUserIdExists, (req, res, next)=>{
-    if(bcrypt.compareSync(req.body.password, req.user.password)){
-        if(req.body.newPassword){
-            const {username, phoneNumber, newPassword} = req.body
-            const hash = bcrypt.hashSync(newPassword, 8)
-            Users.updateUser(req.params.user_id, {username, phoneNumber, password: hash})
+router.put('/:user_id',validateUserUpdateCredentials, checkUserIdExists, (req, res, next)=>{
+    if(bcrypt.compareSync(req.password, req.user.password)){
+        if(req.newPassword === ''){
+            Users.updateUser(req.params.user_id, {username:req.username, phoneNumber:req.phoneNumber})
                 .then(updatedUser=>{
-                    res.status(200).json({...updatedUser, message:"Password successfully changed."})
+                    res.status(200).json(updatedUser)
                 })
                 .catch(next)
         }else{
-            const {username, phoneNumber} = req.body
-            Users.updateUser(req.params.user_id, {username, phoneNumber})
+            const hash = bcrypt.hashSync(req.newPassword, 8)
+            Users.updateUser(req.params.user_id, {username:req.username, phoneNumber: req.phoneNumber, password: hash})
                 .then(updatedUser=>{
-                    res.status(200).json(updatedUser)
+                    res.status(200).json({...updatedUser, message:"Password successfully changed."})
                 })
                 .catch(next)
         }
