@@ -18,8 +18,14 @@ router.post('/register',validateUserCredentials,checkUsernameFree, (req, res, ne
 router.post('/login',validateUserLoginCredentials,checkUsernameExists, (req, res, next)=>{
     if(bcrypt.compareSync(req.body.password, req.user.password)){
         const token = tokenCreate(req.user)
+        const {user_id, username, phoneNumber} = req.user
         res.status(200).json({
             message: `Welcome, ${req.user.username}`,
+            user:{
+                user_id: user_id,
+                username: username, 
+                phoneNumber: phoneNumber 
+            },  
             token
         })
     }else{
